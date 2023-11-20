@@ -24,5 +24,10 @@ function subNumber(e) {
     } else {
       resultList.push(currentNumber);
     }
+    showResults(resultList)
   }
+}
+function showResults(resultList) {
+  const resultP = getElementById("results")
+  resultP.innerHTML = resultList.join(', ')
 }
