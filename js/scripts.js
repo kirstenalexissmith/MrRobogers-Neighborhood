@@ -19,28 +19,26 @@ function subNumber(number) {
     } else if (currentNumber.includes('3')) {
       resultList.push("Won't you be my neighbor?");
     } else {
-      number;
+      return currentNumber;
     }
   }
+}
 
-  //UI Logic//
-
-  function showResults(resultList) {
-    const resultP = document.getElementById("results")
-    resultP.innerHTML = resultList.join(', ')
-  }
-
-
-  window.addEventListener("load", function () {
-    const form = document.querySelector("form");
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const numberInput = parseInt(document.getElementById("numberInput").value)
-      const resultOutput = getNumber(numberInput)
-      showResults(resultOutput)
-    });
-    const refresh = document.getElementById("refresh");
-    refresh.addEventListener("click", function () {
-      location.reload();
-    })
+//UI Logic//
+window.onload = function () {
+  document.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const numberInput = parseInt(document.getElementById("numberInput").value)
+    const resultOutput = getNumber(numberInput)
+    showResults(resultOutput)
+  });
+  const refresh = document.getElementById("refresh");
+  refresh.addEventListener("click", function () {
+    location.reload();
   })
+}
+
+function showResults(resultList) {
+  const resultP = document.getElementById("results")
+  resultP.innerHTML = resultList.join(', ')
+}
