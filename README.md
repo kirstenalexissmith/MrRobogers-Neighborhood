@@ -18,7 +18,8 @@ _{This webpage will ask the user to enter a number. It then takes this input and
 
 ## Setup/Installation Requirements
 
-* _Click provided link which will prompt the link to open the webpage of your preferred browser:
+* _Click provided link which will prompt the link to open the webpage of your preferred browser: https://github.com/kirstenalexissmith/MrRobogers-Neighborhood.git
+
 ## Known Bugs
 
 * Will not display results
