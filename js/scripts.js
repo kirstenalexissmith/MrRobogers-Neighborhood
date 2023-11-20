@@ -6,7 +6,7 @@ function getNumber(numberInput) {
   }
   return resultList.join(", ")
 }
-console.log(getNumber)
+
 function subNumber(number) {
 
   for (let i = 0; i <= numberInput; i++) {
@@ -21,7 +21,6 @@ function subNumber(number) {
     } else {
       number;
     }
-    console.log(subNumber)
   }
 
   //UI Logic//
@@ -34,7 +33,12 @@ function subNumber(number) {
 
   window.addEventListener("load", function () {
     const form = document.querySelector("form");
-    form.addEventListener("submit", subNumber);
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const numberInput = parseInt(document.getElementById("numberInput").value)
+      const resultOutput = getNumber(numberInput)
+      showResults(resultOutput)
+    });
     const refresh = document.getElementById("refresh");
     refresh.addEventListener("click", function () {
       location.reload();
