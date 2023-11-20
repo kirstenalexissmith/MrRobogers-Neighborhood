@@ -1,10 +1,11 @@
 //Business Logic//
-function getNumber(numberInput) {
+function getNumber() {
+  const numberInput = document.getElementById('numberInput').value;
   const resultList = [];
   for (let i = 0; i <= numberInput; i++) {
     resultList.push(subNumber(i));
   }
-  return resultList.join(", ")
+  showResults(resultList)
 }
 
 function subNumber(number) {
@@ -40,5 +41,5 @@ window.onload = function () {
 
 function showResults(resultList) {
   const resultP = document.getElementById("results")
-  resultP.innerHTML = resultList.join(', ')
+  resultP.innerText = resultList.join(', ')
 }
