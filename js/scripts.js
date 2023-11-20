@@ -1,3 +1,4 @@
+//Business Logic//
 function getNumber(numberInput) {
   const resultList = [];
   for (let i = 0; i <= numberInput; i++) {
@@ -5,11 +6,11 @@ function getNumber(numberInput) {
   }
   return resultList.join(", ")
 }
-
-function subNumber() {
+console.log(getNumber)
+function subNumber(number) {
 
   for (let i = 0; i <= numberInput; i++) {
-    let currentNumber = i.toString();
+    let currentNumber = number.toString();
 
     if (currentNumber.includes('1')) {
       resultList.push("Beep!");
@@ -20,14 +21,18 @@ function subNumber() {
     } else {
       number;
     }
+    console.log(subNumber)
   }
+
+  //UI Logic//
 
   function showResults(resultList) {
     const resultP = document.getElementById("results")
     resultP.innerHTML = resultList.join(', ')
+  }
 
 
-  } window.addEventListener("load", function () {
+  window.addEventListener("load", function () {
     const form = document.querySelector("form");
     form.addEventListener("submit", subNumber);
     const refresh = document.getElementById("refresh");
