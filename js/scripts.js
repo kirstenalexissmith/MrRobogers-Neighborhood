@@ -1,16 +1,12 @@
-window.addEventListener("load", function () {
-  const form = document.querySelector("form");
-  form.addEventListener("submit", subNumber);
-  const refresh = document.getElementById("refresh");
-  refresh.addEventListener("click", function () {
-    location.reload();
-  })
-})
-
-function subNumber(e) {
-  e.preventDefault();
-  const numberInput = document.getElementById('numberInput').value;
+function getNumber(numberInput) {
   const resultList = [];
+  for (let i = 0; i <= numberInput; i++) {
+    resultList.push(subNumber(i));
+  }
+  return resultList.join(", ")
+}
+
+function subNumber() {
 
   for (let i = 0; i <= numberInput; i++) {
     let currentNumber = i.toString();
@@ -22,12 +18,20 @@ function subNumber(e) {
     } else if (currentNumber.includes('3')) {
       resultList.push("Won't you be my neighbor?");
     } else {
-      resultList.push(currentNumber);
+      number;
     }
-    showResults(resultList)
   }
-}
-function showResults(resultList) {
-  const resultP = getElementById("results")
-  resultP.innerHTML = resultList.join(', ')
-}
+
+  function showResults(resultList) {
+    const resultP = document.getElementById("results")
+    resultP.innerHTML = resultList.join(', ')
+
+
+  } window.addEventListener("load", function () {
+    const form = document.querySelector("form");
+    form.addEventListener("submit", subNumber);
+    const refresh = document.getElementById("refresh");
+    refresh.addEventListener("click", function () {
+      location.reload();
+    })
+  })
