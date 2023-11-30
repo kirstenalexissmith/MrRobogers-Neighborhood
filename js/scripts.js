@@ -13,7 +13,7 @@ function subNumber(arrayList) {
     let currentNumber = arrayList[i].toString();
 
     if (currentNumber.includes('3')) {
-      subArray.push("Won't you be my neighbor?!");
+      subArray.push("Won't you be my neighbor?");
     } else if (currentNumber.includes('2')) {
       subArray.push("Boop!");
     } else if (currentNumber.includes('1')) {

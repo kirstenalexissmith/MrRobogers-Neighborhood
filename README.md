@@ -24,10 +24,25 @@ _{This webpage will ask the user to enter a number. It then takes this input and
 
 ## Tests
 ```
-Describe: getNumber()
+Describe: getNumber();
+
 Test: "It will accept an integer and output an array of strings from "0" to the given integer"
 Code: getNumber(4);
 Expect: ["0", "1", "2", "3", "4"]
+
+Describe: subNumber();
+
+Test: "It will replace the number "3" within a given array to the phrase "Wont you be my neighbor?"
+Code: subNumber(["0", "1", "2" "3", "4", "5"])
+Expect:  ["0", "Beep", "Boop!", "Won't you be my neighbor?!", "4", "5"]
+
+Test: "It will replace the number "2" within a given array to the phrase "Boop!"
+Code: subNumber(["0", "1", "2" "3", "4", "5"])
+Expect:  ["0", "Beep", "Boop!", "Won't you be my neighbor?!", "4", "5"]
+
+Test: "It will replace the number "1" within a given array to the phrase "Beep"
+Code: subNumber(["0", "1", "2" "3", "4", "5"])
+Expect:  ["0", "Beep", "Boop!", "Won't you be my neighbor?!", "4", "5"]
 
 ```
 ## Known Bugs
