@@ -2,9 +2,9 @@
 function getNumber(numberInput) {
   let arrayList = [];
   for (let i = 0; i <= numberInput; i++) {
-    arrayList.push(i)
+    arrayList.push(i);
   }
-  return arrayList
+  return arrayList;
 }
 
 function subNumber(arrayList) {
@@ -30,8 +30,8 @@ window.onload = function () {
   document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
     const numberInput = parseInt(document.getElementById("numberInput").value);
-    const resultOutput = getNumber(numberInput)
-    const subOutput = subNumber(resultOutput); 
+    const resultOutput = getNumber(numberInput);
+    const subOutput = subNumber(resultOutput);
     showResults(subOutput);
   });
 
@@ -42,6 +42,6 @@ window.onload = function () {
 }
 
 function showResults(resultList) {
-  const resultP = document.getElementById("results")
-  resultP.innerText = resultList.join(', ')
+  const resultP = document.getElementById("results");
+  resultP.innerText = resultList.join(', ');
 }

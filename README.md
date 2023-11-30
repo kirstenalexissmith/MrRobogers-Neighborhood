@@ -18,11 +18,13 @@ _{This webpage will ask the user to enter a number. It then takes this input and
 
 ## Setup/Installation Requirements
 
-* _Click provided link which will prompt the link to open the webpage of your preferred browser: https://github.com/kirstenalexissmith/MrRobogers-Neighborhood.git
+* Clone this repository to your desktop.
+* Navigate to the top level of the directory. 
+* Open `index.html` in your browser. 
 
 ## Known Bugs
 
-* Will not display results
+* No known bugs
 
 
 ## License
