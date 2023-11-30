@@ -1,38 +1,40 @@
 //Business Logic//
-function getNumber() {
-  const numberInput = document.getElementById('numberInput').value;
-  const resultList = [];
+function getNumber(numberInput) {
+  let arrayList = [];
   for (let i = 0; i <= numberInput; i++) {
-    resultList.push(subNumber(i));
+    arrayList.push(i)
   }
-  showResults(resultList)
+  return arrayList
 }
 
-function subNumber(number) {
+function subNumber(arrayList) {
+  let subArray = []
+  for (let i = 0; i < arrayList.length; i++) {
+    let currentNumber = arrayList[i].toString();
 
-  for (let i = 0; i <= numberInput; i++) {
-    let currentNumber = number.toString();
-
-    if (currentNumber.includes('1')) {
-      resultList.push("Beep!");
+    if (currentNumber.includes('3')) {
+      subArray.push("Won't you be my neighbor?!");
     } else if (currentNumber.includes('2')) {
-      resultList.push("Boop!");
-    } else if (currentNumber.includes('3')) {
-      resultList.push("Won't you be my neighbor?");
+      subArray.push("Boop!");
+    } else if (currentNumber.includes('1')) {
+      subArray.push("Beep");
     } else {
-      return currentNumber;
+      subArray.push(currentNumber);
     }
   }
+  return subArray;
 }
 
 //UI Logic//
 window.onload = function () {
   document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
-    const numberInput = parseInt(document.getElementById("numberInput").value)
+    const numberInput = parseInt(document.getElementById("numberInput").value);
     const resultOutput = getNumber(numberInput)
-    showResults(resultOutput)
+    const subOutput = subNumber(resultOutput); 
+    showResults(subOutput);
   });
+
   const refresh = document.getElementById("refresh");
   refresh.addEventListener("click", function () {
     location.reload();
